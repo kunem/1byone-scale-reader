@@ -43,14 +43,14 @@ Install dependencies:
 
 ```bash
 pip install bleak
-
+```
 
 🚀 Usage
 
 Run the main script:
-
+```bash
 python scale_reader.py
-
+```
 
 Example output:
 
