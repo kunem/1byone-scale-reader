@@ -1,53 +1,31 @@
-# BLE Smart Scale Reverse Engineering
+# BLE Smart Scale Reader
 
-A Python tool for connecting to and analyzing BLE smart bathroom scales (tested on 1byone smart body scale models).
+A Python tool that connects to BLE bathroom scales and streams real-time weight data directly from the device.
 
-This project focuses on reverse engineering the BLE communication protocol used by smart scales to extract real-time weight data directly from the device.
-
----
-
-## 📌 What This Project Does
-
-- Connects directly to BLE smart scales using Python (`bleak`)
-- Discovers and logs all BLE services and characteristics
-- Captures live weight broadcast packets in real time
-- Decodes proprietary 16-byte BLE frames
-- Converts raw sensor values into human-readable weight (lbs / kg)
-- Provides debugging tools for reverse engineering unknown BLE devices
+Tested on 1byone smart body scale (BLE model).
 
 ---
 
-## ⚠️ Important Limitations
+## ⚙️ Features
 
-- The scale tested in this project broadcasts **weight only over BLE**
-- Body composition metrics (body fat %, muscle, water, bone mass, BMR) are **NOT transmitted via BLE**
-- Those values are likely computed internally by the scale or handled by the official mobile app
-- This project focuses strictly on BLE-level data extraction
-
----
-
-## 🧠 Key Findings
-
-During reverse engineering, the following was discovered:
-
-- The scale uses a fixed 16-byte BLE packet structure: cf 01 ad aa 04 XX YY ZZ ...
-- - Only specific bytes contain weight-related data
-- Remaining bytes represent device state, flags, or checksums
-- No impedance or body composition data is exposed via BLE
+- Auto BLE device scanning
+- Interactive device selection
+- Live weight streaming
+- Clean terminal display
+- Stable packet decoding
+- Cross-device support (any BLE scale using fff0 service)
 
 ---
 
-## 📦 Requirements
+## ⚠️ Notes
 
-Install dependencies:
+- Only weight data is transmitted over BLE
+- Body composition metrics (fat %, muscle, water, etc.) are NOT exposed
+- Those are likely computed internally by the scale or mobile app
+
+---
+
+## 🚀 Installation
 
 ```bash
-pip install bleak
-```
-
-🚀 Usage
-
-Run the main script:
-```bash
-python scale_reader.py
-```
+pip install -r requirements.txt
