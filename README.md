@@ -2,7 +2,7 @@
 
 A Python tool that connects to BLE bathroom scales and streams real-time weight data directly from the device.
 
-Tested on 1byone smart body scale (BLE model).
+Tested on 1byone smart body scale ([BLE model](https://www.amazon.com/dp/B01FHELB56)).
 
 ---
 
