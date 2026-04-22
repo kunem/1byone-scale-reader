@@ -29,7 +29,7 @@ Tested on 1byone smart body scale (BLE model).
 
 ```bash
 pip install -r requirements.txt
-
+```
 
 ## 🔧 How It Works
 Scans for BLE devices
