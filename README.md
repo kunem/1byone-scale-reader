@@ -51,11 +51,3 @@ Run the main script:
 ```bash
 python scale_reader.py
 ```
-
-Example output:
-
-============================
-RAW : 11622
-KG  : 106.8
-LBS : 235.4
-============================
