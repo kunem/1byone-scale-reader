@@ -29,3 +29,14 @@ Tested on 1byone smart body scale (BLE model).
 
 ```bash
 pip install -r requirements.txt
+
+
+## 🔧 How It Works
+Scans for BLE devices
+Connects to selected scale
+Subscribes to notification characteristic:
+0000fff4-0000-1000-8000-00805f9b34fb
+Sends initialization packet
+Decodes proprietary 16-byte BLE frames into weight
+
+
